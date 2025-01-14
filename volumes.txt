@@ -1,0 +1,28 @@
+
+Date and Time/날짜와 시간/日期和时间: 2025-01-09 10:13:49.437950
+Tire Width/타이어 폭/轮胎宽度: 205.0
+Aspect Ratio/비율/轮胎扁平比: 60.0
+Diameter/직경/直径: 15.0
+Volume/부피/体积: 39.92 liters/리터/升
+
+
+Date and Time / 날짜와 시간 / 日期和时间: 2025-01-09 10:14:38.676519
+Tire Width / 타이어 / 폭/轮胎宽度: 205.0
+Aspect Ratio / 비율 / 轮胎扁平比: 60.0
+Diameter / 직경 / 直径: 15.0
+Volume / 부피 / 体积: 39.92 liters/리터/升
+
+
+Date and Time / 날짜와 시간 / 日期和时间: 2025-01-09 10:15:03.952455
+Tire Width / 타이어 / 폭/轮胎宽度: 99.0
+Aspect Ratio / 비율 / 轮胎扁平比: 99.0
+Diameter / 직경 / 直径: 99.0
+Volume / 부피 / 体积: 79.64 liters / 리터 / 升
+
+
+Date and Time / 날짜와 시간 / 日期和时间: 2025-01-09 10:17:41.505847
+Tire Width / 타이어 폭 /轮胎宽度: 60.0
+Aspect Ratio / 비율 / 轮胎扁平比: 205.0
+Diameter / 직경 / 直径: 15.0
+Volume / 부피 / 体积: 11.69 liters-리터-升
+
