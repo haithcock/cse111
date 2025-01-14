@@ -77,7 +77,11 @@ def get_verb(quantity, tense):
         pastverbs = [ "drank", "ate", "grew", "laughed", "thought",
       "ran", "slept", "talked", "walked", "wrote"]
     
-    if tense is 2:()
+    if tense is 2:
+        
+    
+      if tense is 3: 
+         ()
 
 
 
