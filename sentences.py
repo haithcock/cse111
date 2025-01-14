@@ -14,7 +14,7 @@ def main():
 ()
 main()
 
-#check
+
 def make_sentence():
     ()
 
@@ -50,12 +50,14 @@ print(get_determiner(5))  # Could return "some", "many", or "the"
 def get_noun(quantity):
 
 
-    if quantity == 1:
+    if quantity == 1: 
         nounwords = ["bird", "boy", "car", "cat", "child",
       "dog", "girl", "man", "rabbit", "woman"]
     else:
         nounwords = ["birds", "boys", "cars", "cats", "children",
       "dogs", "girls", "men", "rabbits", "women"]
+        
+    return random.choice(nounwords)
     ()
 
 def get_verb(quantity, tense):
