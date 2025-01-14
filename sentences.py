@@ -72,12 +72,12 @@ def get_verb(quantity, tense):
         pluralpresenttense = ["drink", "eat", "grow", "laugh", "think",
       "run", "sleep", "talk", "walk", "write"]
     
-    if tense is past:
+    if tense is 1:
 
         pastverbs = [ "drank", "ate", "grew", "laughed", "thought",
       "ran", "slept", "talked", "walked", "wrote"]
-
-    ()
+    
+    if tense is 2:()
 
 
 
