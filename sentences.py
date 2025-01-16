@@ -25,7 +25,7 @@ def get_determiner(quantity):
         words = ["a", "one", "the"]
     else:
         words = ["some", "many", "the"]
-  # Randomly choose and return a determiner.
+    # Randomly choose and return a determiner.
     word = random.choice(words)
     return word
 ()
@@ -45,22 +45,8 @@ def get_noun(quantity):
     return nounword
     ()
 
-random_noun = get_noun(1)
-
 #step 4 user determiner to write get_verb
-
-
 def get_verb(quantity, tense):
-    futuretense = [      "will drink", "will eat", "will grow", "will laugh",
-      "will think", "will run", "will sleep", "will talk",
-      "will walk", "will write"]
-    
-    if quantity == 1:
-        presenttense = ["drinks", "eats", "grows", "laughs", "thinks",
-      "runs", "sleeps", "talks", "walks", "writes"]
-    else:
-        pluralpresenttense = ["drink", "eat", "grow", "laugh", "think",
-      "run", "sleep", "talk", "walk", "write"]
     
     if tense == 1:#past tense
        verbs = [ "drank", "ate", "grew", "laughed", "thought",
@@ -78,30 +64,38 @@ def get_verb(quantity, tense):
       verbs = ["will drink", "will eat", "will grow", "will laugh",
                  "will think", "will run", "will sleep", "will talk",
                  "will walk", "will write"]
-      ()
+      
+    verbword = random.choice(verbs)
+    return verbword
+()
 ''''
 step 5 Make make_sentence(). make_sentence() must call get_determiner(), 
   -get_noun(), and get_verb() then finally build and return a sentence. 
   Be sure to include capitalization for the first letter of the
   sentence and end it with a period.
 '''
-
-
 def make_sentence(quantity, tense):
-    ()
+  determiner = get_determiner(quantity)
+  noun =  get_noun(quantity)
+  verb =  get_verb(quantity, tense)
+  sentence = f"{determiner} {noun} {verb}"
+  sentence = sentence.capitalize()
+  sentence += "."
+  return sentence
+  ()
 
 '''
 Step 6 - write the main function to call make_sentence() function six 
 times and print six sentences with [...](see lab manual) characteristics.
 '''
 def main():
-    quantity_input = input(
-        "\nDo you want sentences with plural nouns? \n"
-        "Press: 1 for plural nouns,\n"
-        "Press: 2 for singular nouns.\n")
-    quantity = int(quantity_input)
-
-    tense_input = input("\nWhat is the tense? \nPress: 1 for past tense,\nPress: 2 for present tense,\nPress: 3 for future tense.\n")
-    tense = int(tense_input)
-()
+  sentence1 = make_sentence(1, 1)
+  sentence2 = make_sentence(1, 2)
+  sentence3 = make_sentence(1, 3)
+  sentence4 = make_sentence(2, 1)
+  sentence5 = make_sentence(2, 2)
+  sentence6 = make_sentence(2, 3)
+  print(f"{sentence1},\n {sentence2},\n {sentence3},\n {sentence4},\n {sentence5},\n {sentence6}")
+    
+  ()
 main()
