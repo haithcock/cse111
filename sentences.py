@@ -1,23 +1,11 @@
+#Step 1:
+
 import random
 
-def main():
-    quantity_input = input(
-        "\nDo you want sentences with plural nouns? \n"
-        "Press: 1 for plural nouns,\n"
-        "Press: 2 for singular nouns.\n")
-    quantity = int(quantity_input)
+#Step 2:
 
-    tense_input = input("\nWhat is the tense? \nPress: 1 for past tense,\nPress: 2 for present tense,\nPress: 3 for future tense.\n")
-    tense = int(tense_input)
-()
-main()
+#get determiner - just copy and paste
 
-
-def make_sentence():
-    ()
-
-#def get_determiner():
-  
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
     a word like "the", "a", "one", "some", "many".
@@ -42,6 +30,24 @@ def get_determiner(quantity):
 
 ()
 
+
+def main():
+    quantity_input = input(
+        "\nDo you want sentences with plural nouns? \n"
+        "Press: 1 for plural nouns,\n"
+        "Press: 2 for singular nouns.\n")
+    quantity = int(quantity_input)
+
+    tense_input = input("\nWhat is the tense? \nPress: 1 for past tense,\nPress: 2 for present tense,\nPress: 3 for future tense.\n")
+    tense = int(tense_input)
+()
+main()
+
+
+def make_sentence():
+    ()
+
+  
 def get_noun(quantity):
 
 
