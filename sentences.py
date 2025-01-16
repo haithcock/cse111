@@ -68,6 +68,31 @@ def get_verb(quantity, tense):
     verbword = random.choice(verbs)
     return verbword
 ()
+def get_adverbs():
+   adverbs = ["quickly", "happily", "loudly", "silently", "gracefully", "angrily", "sadly", "eagerly", "easily","carefully"]
+   adverby = random.choice(adverbs)
+   return adverby
+   ()
+def get_preposition():
+  preps = [ "about", "above", "across", "after", "along",
+      "around", "at", "before", "behind", "below",
+      "beyond", "by", "despite", "except", "for",
+      "from", "in", "into", "near", "of",
+      "off", "on", "onto", "out", "over",
+      "past", "to", "under", "with", "without"]
+  prep = random.choice(preps)
+  return prep
+  ()
+
+
+def get_prepositional_phrase(quantity):
+  determiner = get_determiner(quantity)
+  noun =  get_noun(quantity)
+  preposition = get_preposition()
+  prepositional_phrase = f"{preposition} {determiner} {noun}"
+  return prepositional_phrase
+  ()
+
 ''''
 step 5 Make make_sentence(). make_sentence() must call get_determiner(), 
   -get_noun(), and get_verb() then finally build and return a sentence. 
@@ -78,11 +103,15 @@ def make_sentence(quantity, tense):
   determiner = get_determiner(quantity)
   noun =  get_noun(quantity)
   verb =  get_verb(quantity, tense)
-  sentence = f"{determiner} {noun} {verb}"
+  adverb = get_adverbs()
+  preposition = get_prepositional_phrase(quantity)
+  sentence = f"{determiner} {noun} {verb} {adverb} {preposition}"
   sentence = sentence.capitalize()
   sentence += "."
   return sentence
   ()
+
+
 
 '''
 Step 6 - write the main function to call make_sentence() function six 
