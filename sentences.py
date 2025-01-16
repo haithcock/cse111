@@ -1,10 +1,8 @@
 import random
 
-
-
 def main():
     quantity_input = input(
-        "Do you want sentences with plural nouns? \n"
+        "\nDo you want sentences with plural nouns? \n"
         "Press: 1 for plural nouns,\n"
         "Press: 2 for singular nouns.\n")
     quantity = int(quantity_input)
@@ -18,9 +16,9 @@ main()
 def make_sentence():
     ()
 
-def get_determiner():
+#def get_determiner():
   
-  def get_determiner(quantity):
+def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
     a word like "the", "a", "one", "some", "many".
     If quantity is 1, this function will return either "a",
@@ -41,9 +39,6 @@ def get_determiner():
         words = ["some", "many", "the"]
     # Randomly choose and return a determiner.
     return random.choice(words)
-# Example usage
-print(get_determiner(1))  # Could return "a", "one", or "the"
-print(get_determiner(5))  # Could return "some", "many", or "the"
 
 ()
 
@@ -89,24 +84,3 @@ def get_verb(quantity, tense):
                  "will think", "will run", "will sleep", "will talk",
                  "will walk", "will write"]
       ()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
