@@ -1,3 +1,11 @@
+'''
+This program exceeds requirements for the 
+100% necessary by including an additional 
+function called "get_adverb".
+This is also reflective in the print statments
+within the terminal.
+'''
+
 #Step 1:
 
 import random
