@@ -95,7 +95,7 @@ def main():
   sentence4 = make_sentence(2, 1)
   sentence5 = make_sentence(2, 2)
   sentence6 = make_sentence(2, 3)
-  print(f"{sentence1},\n {sentence2},\n {sentence3},\n {sentence4},\n {sentence5},\n {sentence6}")
+  print(f"\n {sentence1}\n {sentence2}\n {sentence3}\n {sentence4}\n {sentence5}\n {sentence6} \n")
     
   ()
 main()
