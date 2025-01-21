@@ -1,5 +1,5 @@
-from pytest import approx
 import pytest
+from pytest import approx
 
 
 def test_water_column_height():
