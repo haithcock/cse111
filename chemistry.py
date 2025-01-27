@@ -97,14 +97,19 @@ def make_periodic_table():
         ["Yb", "Ytterbium", 173.054],
         ["Zn", "Zinc", 65.38],
         ["Zr", "Zirconium", 91.224]
-
     ]
+    return periodic_table
+
+
+
+
 ()
 def main():
     chemformula=print(input("What is the chemical formula for a molecule:  ")) #1
     chemmass = print(input("What is the mass of your chemical in grams:  "))#2 Get the mass of a chemical sample in grams from the user.
-    periodictable = make_periodic_table([]) #3
-    for i in []
+    periodictable = make_periodic_table() #3
+    for element in periodictable:
+        print(f"{element[1]} {element[2]}")
 
     
     
@@ -113,3 +118,6 @@ def main():
     
     
     ()
+
+if __name__ == "__main__":
+    main()
