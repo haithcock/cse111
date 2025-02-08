@@ -1,4 +1,5 @@
 # Example 1
+"""
 def main():
     numbers = [89, 90, 70, 90, 93, 48, 54]
     total = 0
@@ -9,9 +10,8 @@ def main():
 # Call main to start this program.
 if __name__ == "__main__":
     main()
-
-
-    """
+"""
+"""
     
 CLASS NOTES:
 When we use declarative programming 
@@ -30,9 +30,9 @@ but rather we focus on what we want
  Example 2 contains SQL code that causes the computer 
  to compute the average of a column of numbers. 
     
-    """
+"""
 
-    """
+"""
     MY NOTES:
     To me this sounds like in python we 
     will run code line by line versus as a 
@@ -51,15 +51,30 @@ but rather we focus on what we want
     between things in a schema between tables,
     then you are also calculating various maths
     when coloumns have their own numerical values.
+"""
 
 
-
-
-
-
-
-
+def main():
 
     
-    
-    """
+
+    fruit_list = ["pear", "banana", "apple", "mango"]
+    print(f"original: {fruit_list}")
+    fruit_list.reverse()
+    print(f"{fruit_list}")
+    fruit_list.append("orange")
+    print(f"{fruit_list}")
+    number_of_items = len(fruit_list)
+    print(f"The list contains {number_of_items} items.")
+    appleindex = fruit_list.index("apple")
+    print(f"the location of 'apple' is {appleindex}")
+    fruit_list.remove("banana")
+    print(f"{fruit_list}")
+    lastlistitem = fruit_list[-1]
+    print(f"{lastlistitem}")
+    print(f"{fruit_list}")
+    #fruit_list.remove([])
+    #print(f"{fruit_list}")
+if __name__ == "__main__":
+
+    main()
