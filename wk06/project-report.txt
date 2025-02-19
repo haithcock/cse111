@@ -1,0 +1,52 @@
+﻿Second Report for a Student Chosen Project
+
+Do the following:
+
+1. In the table below, list the dates, amount of time spent, and
+description of the work that you did on your project. Follow the example
+that is in the first row of the table below. Include the time you spent
+doing any of the following:
+    a. discussing your project with your teacher, tutor, or fellow students
+    b. researching by reading articles and watching applicable videos
+    c. designing your project by drawing diagrams and other applicable documents
+    d. writing experimental code
+    d. writing code for your project
+    e. writing test functions
+    f. debugging your code
+    g. any other activity that helped you complete your project
+
+=============Example====================
+            Time Spent
+   Date       (hours)   Description of Work
+----------  ----------  -------------------------
+2021-12-03      2.5     Wrote two program functions and two test functions
+2021-12-03      .5      Watched video on 
+=============Example====================
+
+
+
+2. In Canvas, submit this completed text file, your Python program, your
+Python test file, and any project data files such as .txt and .csv files and
+link to video walkthrough if needed.
+
+
+
+=============My final project====================
+            Time Spent
+   Date       (hours)   Description of Work
+----------  ----------  -------------------------
+2025-1-31      1     	  Read about encryption in python.
+2025-2-01      1		  Read more about encryption for python.
+2025-2-05	   1 		  Read about using databases in python.
+2025-2-05	   1		  watched videos about using databases in python
+2025-2-05	   1 		  Started writing first function of lockbox.py
+2025-2-06	   2 		  continued writing functions for lockbox.py
+2025-2-08	   1	        Reviewed how to use filepaths for different OSs
+2025-2-08	   1		  reviewed how to encrypt files correctly using AES
+2025-2-11	   1		  Reviewed how to use GUI in python with tk.
+2025-2-13	   1 	        Met with my CSE111 group and studied GUI together.
+2025-2-14	   2		  Wrote a majority of the program.
+2025-2-15	   1		  Wrote two test functions.
+2025-2-16	   1	        Wrote last test function.
+=============Example====================
+

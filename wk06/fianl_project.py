@@ -9,11 +9,10 @@ import base64
 import random
 import string
 
-# Database for storing passwords securely
-DB_FILE = "lockbox.db"
+DB_FILE = "lockbox.db"   #db for storing passwords securely
 
-# Initialize database
-def init_db():
+
+def init_db():                              #initialize db
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute("""
@@ -27,13 +26,13 @@ def init_db():
     conn.commit()
     conn.close()
 
-# Generate encryption key
-def generate_key():
+
+def generate_key(): #this class generates encryption key
     return Fernet.generate_key().decode()  # Correctly formatted key
 
-# Encrypt file/folder using AES
-def encrypt_file(filepath, password):
-    key = generate_key().encode()  # Ensure it’s in bytes
+
+def encrypt_file(filepath, password):    #encrypfile/folder using AES encryption
+    key = generate_key().encode()  #this ensures it’s in bytes
     cipher = Fernet(key)
 
     with open(filepath, "rb") as f:
@@ -44,8 +43,8 @@ def encrypt_file(filepath, password):
 
     return key.decode()  # Return key for storage
 
-# Decrypt file when time expires
-def decrypt_file(filepath, password):
+
+def decrypt_file(filepath, password):    #this function decrypts the file/folder when time expires
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute("SELECT password, unlock_time FROM locks WHERE filepath=?", (filepath,))
@@ -57,8 +56,7 @@ def decrypt_file(filepath, password):
     
     stored_password, unlock_time = result
 
-    # Check if time has expired
-    if time.time() < unlock_time:
+    if time.time() < unlock_time:      #this checks if time has expired
         messagebox.showwarning("Wait", "The timer has not expired yet!")
         return
 
@@ -69,26 +67,26 @@ def decrypt_file(filepath, password):
     with open(filepath, "wb") as f:
         f.write(decrypted_data)
 
-    # Remove record from database
-    c.execute("DELETE FROM locks WHERE filepath=?", (filepath,))
+
+    c.execute("DELETE FROM locks WHERE filepath=?", (filepath,))#removes record from database.
     conn.commit()
     conn.close()
 
     messagebox.showinfo("Success", "File has been decrypted!")
 
-# Generate a random password
-def generate_random_password():
+
+def generate_random_password():#generate a random password
     return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
 
-# Lock the file
-def lock_file(filepath, user_password, duration):
+
+def lock_file(filepath, user_password, duration):   #locks the file/folder
     password = user_password if user_password else generate_random_password()
     encrypted_key = encrypt_file(filepath, password)
 
     unlock_time = time.time() + duration
 
-    # Store in database
-    conn = sqlite3.connect(DB_FILE)
+
+    conn = sqlite3.connect(DB_FILE) #stores in database
     c = conn.cursor()
     c.execute("INSERT INTO locks (filepath, password, unlock_time) VALUES (?, ?, ?)",
               (filepath, encrypted_key, unlock_time))
@@ -97,17 +95,16 @@ def lock_file(filepath, user_password, duration):
 
     messagebox.showinfo("Locked", f"File locked successfully! Unlocks in {duration // 60} minutes.")
 
-    # Start countdown in a separate thread
-    threading.Thread(target=unlock_timer, args=(filepath, unlock_time)).start()
 
-# Timer function
-def unlock_timer(filepath, unlock_time):
+    threading.Thread(target=unlock_timer, args=(filepath, unlock_time)).start()     #starts countdown in a separate thread
+
+
+def unlock_timer(filepath, unlock_time):  #timer function
     while time.time() < unlock_time:
         time.sleep(10)
     messagebox.showinfo("Unlocked", f"The file {filepath} can now be unlocked.")
 
-# GUI Application
-def open_gui():
+def open_gui():     #gui function
     def select_file():
         file_path = filedialog.askopenfilename()
         file_entry.delete(0, tk.END)
@@ -117,7 +114,7 @@ def open_gui():
         filepath = file_entry.get()
         password = password_entry.get()
         try:
-            duration = int(time_entry.get()) * 60  # Convert to seconds
+            duration = int(time_entry.get()) * 60  #cvonvert to seconds
         except ValueError:
             messagebox.showerror("Error", "Invalid time duration.")
             return
@@ -136,8 +133,8 @@ def open_gui():
 
         decrypt_file(filepath, "")
 
-    # GUI setup
-    root = tk.Tk()
+    
+    root = tk.Tk() #sets up gui
     root.title("LockBox")
     root.geometry("400x300")
 
@@ -159,7 +156,7 @@ def open_gui():
 
     root.mainloop()
 
-# Initialize and run the app
-if __name__ == "__main__":
+
+if __name__ == "__main__":   #initialize and run the program.
     init_db()
     open_gui()
