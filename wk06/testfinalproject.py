@@ -2,8 +2,8 @@ import unittest
 import os
 import sqlite3
 from unittest.mock import patch
-import final_project.py
-from final_project.py import lock_file, unlock_timer, open_gui
+import final_project
+from final_project import lock_file, unlock_timer, open_gui
 from tkinter import messagebox
 from tkinter import filedialog
 import time
